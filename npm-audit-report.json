@@ -1,0 +1,498 @@
+{
+  "auditReportVersion": 2,
+  "vulnerabilities": {
+    "@gatsbyjs/potrace": {
+      "name": "@gatsbyjs/potrace",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "jimp"
+      ],
+      "effects": [],
+      "range": "2.2.0",
+      "nodes": [
+        "node_modules/@gatsbyjs/potrace"
+      ],
+      "fixAvailable": true
+    },
+    "@graphql-tools/url-loader": {
+      "name": "@graphql-tools/url-loader",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "cross-fetch",
+        "ws"
+      ],
+      "effects": [],
+      "range": "<=7.4.3-alpha-9f8b9c45.0",
+      "nodes": [
+        "node_modules/@graphql-tools/url-loader"
+      ],
+      "fixAvailable": true
+    },
+    "@jimp/jpeg": {
+      "name": "@jimp/jpeg",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "jpeg-js"
+      ],
+      "effects": [
+        "@jimp/types"
+      ],
+      "range": "<=0.12.0 || >=0.16.1",
+      "nodes": [
+        "node_modules/@jimp/jpeg"
+      ],
+      "fixAvailable": true
+    },
+    "@jimp/types": {
+      "name": "@jimp/types",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@jimp/jpeg"
+      ],
+      "effects": [
+        "jimp"
+      ],
+      "range": "<=0.11.1-canary.891.908.0 || >=0.16.1",
+      "nodes": [
+        "node_modules/@jimp/types"
+      ],
+      "fixAvailable": true
+    },
+    "@pmmmwh/react-refresh-webpack-plugin": {
+      "name": "@pmmmwh/react-refresh-webpack-plugin",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "ansi-html"
+      ],
+      "effects": [
+        "gatsby"
+      ],
+      "range": "<=0.5.0-rc.6",
+      "nodes": [
+        "node_modules/@pmmmwh/react-refresh-webpack-plugin"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "ansi-html": {
+      "name": "ansi-html",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1082045,
+          "name": "ansi-html",
+          "dependency": "ansi-html",
+          "title": "Uncontrolled Resource Consumption in ansi-html",
+          "url": "https://github.com/advisories/GHSA-whgm-jr23-g3j9",
+          "severity": "high",
+          "cwe": [
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<0.0.8"
+        }
+      ],
+      "effects": [
+        "@pmmmwh/react-refresh-webpack-plugin"
+      ],
+      "range": "<0.0.8",
+      "nodes": [
+        "node_modules/@pmmmwh/react-refresh-webpack-plugin/node_modules/ansi-html"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "babel-plugin-remove-graphql-queries": {
+      "name": "babel-plugin-remove-graphql-queries",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "gatsby"
+      ],
+      "effects": [],
+      "range": ">=2.17.0-next.0",
+      "nodes": [
+        "node_modules/babel-plugin-remove-graphql-queries"
+      ],
+      "fixAvailable": true
+    },
+    "cross-fetch": {
+      "name": "cross-fetch",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1070288,
+          "name": "cross-fetch",
+          "dependency": "cross-fetch",
+          "title": "Incorrect Authorization in cross-fetch",
+          "url": "https://github.com/advisories/GHSA-7gc6-qh9x-w6h8",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-359",
+            "CWE-863"
+          ],
+          "cvss": {
+            "score": 6.1,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+          },
+          "range": ">=3.0.0 <3.1.5"
+        },
+        "node-fetch"
+      ],
+      "effects": [
+        "@graphql-tools/url-loader"
+      ],
+      "range": "<=2.2.3 || 2.2.5 || 3.0.0 - 3.1.4 || >=3.2.0-alpha.0",
+      "nodes": [
+        "node_modules/@graphql-tools/url-loader/node_modules/cross-fetch"
+      ],
+      "fixAvailable": true
+    },
+    "gatsby": {
+      "name": "gatsby",
+      "severity": "high",
+      "isDirect": true,
+      "via": [
+        "@pmmmwh/react-refresh-webpack-plugin",
+        "babel-plugin-remove-graphql-queries",
+        "gatsby-cli",
+        "gatsby-plugin-page-creator",
+        "gatsby-plugin-typescript",
+        "gatsby-plugin-utils",
+        "latest-version"
+      ],
+      "effects": [
+        "babel-plugin-remove-graphql-queries",
+        "gatsby-plugin-page-creator",
+        "gatsby-plugin-typescript",
+        "gatsby-plugin-utils"
+      ],
+      "range": ">=1.9.130",
+      "nodes": [
+        "node_modules/gatsby"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "gatsby-cli": {
+      "name": "gatsby-cli",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "update-notifier"
+      ],
+      "effects": [
+        "gatsby"
+      ],
+      "range": ">=1.1.27",
+      "nodes": [
+        "node_modules/gatsby/node_modules/gatsby-cli"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "gatsby-plugin-page-creator": {
+      "name": "gatsby-plugin-page-creator",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "gatsby",
+        "gatsby-plugin-utils"
+      ],
+      "effects": [],
+      "range": ">=2.11.0-next.0",
+      "nodes": [
+        "node_modules/gatsby-plugin-page-creator"
+      ],
+      "fixAvailable": true
+    },
+    "gatsby-plugin-typescript": {
+      "name": "gatsby-plugin-typescript",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "babel-plugin-remove-graphql-queries",
+        "gatsby"
+      ],
+      "effects": [
+        "gatsby"
+      ],
+      "range": ">=2.13.0-next.0",
+      "nodes": [
+        "node_modules/gatsby-plugin-typescript"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "gatsby-plugin-utils": {
+      "name": "gatsby-plugin-utils",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "gatsby"
+      ],
+      "effects": [
+        "gatsby",
+        "gatsby-plugin-page-creator"
+      ],
+      "range": "0.2.27-qod.19 - 0.2.27-qod.21 || 0.2.31-query-modules-debug-missing-sq.23 || >=0.2.35",
+      "nodes": [
+        "node_modules/gatsby-plugin-utils"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "got": {
+      "name": "got",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1080920,
+          "name": "got",
+          "dependency": "got",
+          "title": "Got allows a redirect to a UNIX socket",
+          "url": "https://github.com/advisories/GHSA-pfrx-2q88-qq97",
+          "severity": "moderate",
+          "cwe": [],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+          },
+          "range": "<11.8.5"
+        }
+      ],
+      "effects": [
+        "package-json"
+      ],
+      "range": "<11.8.5",
+      "nodes": [
+        "node_modules/package-json/node_modules/got"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "jimp": {
+      "name": "jimp",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        "@jimp/types"
+      ],
+      "effects": [
+        "@gatsbyjs/potrace"
+      ],
+      "range": "0.3.6-alpha.5 - 0.11.1-canary.891.908.0 || >=0.16.1",
+      "nodes": [
+        "node_modules/jimp"
+      ],
+      "fixAvailable": true
+    },
+    "jpeg-js": {
+      "name": "jpeg-js",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1075625,
+          "name": "jpeg-js",
+          "dependency": "jpeg-js",
+          "title": "Infinite loop in jpeg-js",
+          "url": "https://github.com/advisories/GHSA-xvf7-4v9q-58w6",
+          "severity": "high",
+          "cwe": [
+            "CWE-835"
+          ],
+          "cvss": {
+            "score": 7.5,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+          },
+          "range": "<0.4.4"
+        }
+      ],
+      "effects": [
+        "@jimp/jpeg"
+      ],
+      "range": "<0.4.4",
+      "nodes": [
+        "node_modules/jpeg-js"
+      ],
+      "fixAvailable": true
+    },
+    "latest-version": {
+      "name": "latest-version",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "package-json"
+      ],
+      "effects": [
+        "gatsby",
+        "update-notifier"
+      ],
+      "range": "0.2.0 - 5.1.0",
+      "nodes": [
+        "node_modules/latest-version"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "node-fetch": {
+      "name": "node-fetch",
+      "severity": "high",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1070022,
+          "name": "node-fetch",
+          "dependency": "node-fetch",
+          "title": "node-fetch is vulnerable to Exposure of Sensitive Information to an Unauthorized Actor",
+          "url": "https://github.com/advisories/GHSA-r683-j2x4-v87g",
+          "severity": "high",
+          "cwe": [
+            "CWE-173",
+            "CWE-200",
+            "CWE-601"
+          ],
+          "cvss": {
+            "score": 8.8,
+            "vectorString": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H"
+          },
+          "range": "<2.6.7"
+        }
+      ],
+      "effects": [
+        "cross-fetch"
+      ],
+      "range": "<2.6.7",
+      "nodes": [
+        "node_modules/@graphql-tools/url-loader/node_modules/node-fetch"
+      ],
+      "fixAvailable": true
+    },
+    "package-json": {
+      "name": "package-json",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "got"
+      ],
+      "effects": [
+        "latest-version"
+      ],
+      "range": "<=6.5.0",
+      "nodes": [
+        "node_modules/package-json"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "update-notifier": {
+      "name": "update-notifier",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        "latest-version"
+      ],
+      "effects": [
+        "gatsby-cli"
+      ],
+      "range": "0.2.0 - 5.1.0",
+      "nodes": [
+        "node_modules/update-notifier"
+      ],
+      "fixAvailable": {
+        "name": "gatsby",
+        "version": "2.19.38",
+        "isSemVerMajor": true
+      }
+    },
+    "ws": {
+      "name": "ws",
+      "severity": "moderate",
+      "isDirect": false,
+      "via": [
+        {
+          "source": 1070475,
+          "name": "ws",
+          "dependency": "ws",
+          "title": "ReDoS in Sec-Websocket-Protocol header",
+          "url": "https://github.com/advisories/GHSA-6fc8-4gx4-v693",
+          "severity": "moderate",
+          "cwe": [
+            "CWE-345",
+            "CWE-400"
+          ],
+          "cvss": {
+            "score": 5.3,
+            "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          },
+          "range": ">=7.0.0 <7.4.6"
+        }
+      ],
+      "effects": [
+        "@graphql-tools/url-loader"
+      ],
+      "range": "7.0.0 - 7.4.5",
+      "nodes": [
+        "node_modules/ws"
+      ],
+      "fixAvailable": true
+    }
+  },
+  "metadata": {
+    "vulnerabilities": {
+      "info": 0,
+      "low": 0,
+      "moderate": 7,
+      "high": 14,
+      "critical": 0,
+      "total": 21
+    },
+    "dependencies": {
+      "prod": 1469,
+      "dev": 0,
+      "optional": 20,
+      "peer": 0,
+      "peerOptional": 0,
+      "total": 1488
+    }
+  }
+}
