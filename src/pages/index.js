@@ -129,7 +129,7 @@ const IndexPage = () => {
       <h1 style={headingStyles}>
         Your One Job Destintiy
         <br />
-        <span style={headingAccentStyles}>Welcome to Reva</span>
+        <span style={headingAccentStyles}>Congrats build Job</span>
       </h1>
       <p style={paragraphStyles}>
         Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
